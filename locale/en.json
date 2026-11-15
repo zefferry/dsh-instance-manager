@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Instance Manager",
+    "description": "Create and run isolated DSH instances: independent kernel copy, independent plugins, configurable storage and a fixed port."
+  }
+}

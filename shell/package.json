@@ -1,0 +1,7 @@
+{
+  "name": "dsh-instance-shell",
+  "productName": "DSH Instance",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.cjs"
+}

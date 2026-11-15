@@ -1,0 +1,3 @@
+- insert:
+    - id: instance-manager
+      name: "@local/dsh-instance-manager"

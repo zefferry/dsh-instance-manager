@@ -1,0 +1,46 @@
+{
+  "name": "@local/dsh-instance-manager",
+  "version": "0.17.2",
+  "private": true,
+  "type": "module",
+  "description": "Manage isolated DSH instances: their own kernel copy, own profile, fixed port and workspace attribution.",
+  "main": "./host/index.js",
+  "icon": "./assets/icon.svg",
+  "exports": {
+    ".": "./host/index.js",
+    "./client": "./client.js",
+    "./icon": "./assets/icon.svg",
+    "./locale/*": "./locale/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "host/index.js",
+    "host/shell.js",
+    "host/workspace-sync.js",
+    "client.js",
+    "icon-prompt.md",
+    "assets/icon.svg",
+    "docs/plugin-surface-v1.md",
+    "locale/en.json",
+    "locale/zh.json",
+    "cordis.patch.yml",
+    "README.md",
+    "shell"
+  ],
+  "scripts": {
+    "prepack": "node scripts/verify-pack-files.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-primitives",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
